@@ -1,15 +1,16 @@
 {
 	"name": "my-app",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "prepare": "husky install",
+		"prepare": "husky install",
 		"lint": "eslint --max-warnings=0 \"./src/**/*.{js,ts,tsx,svelte}\"",
-    "lint:fix": "eslint --fix \"./src/**/*.{js,ts,tsx,svelte}\"",
+		"lint:fix": "eslint --fix \"./src/**/*.{js,ts,tsx,svelte}\"",
 		"format": "prettier --write \"{public,src}/**/*.{css,html,js,ts,tsx,svelte}\""
 	},
 	"devDependencies": {
@@ -20,9 +21,9 @@
 		"@typescript-eslint/parser": "^5.27.0",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.46.0",
@@ -36,7 +37,7 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"cookie": "^0.4.1",
-    "postcss": "^8.4.16",
-    "sass": "^1.54.6"
+		"postcss": "^8.4.16",
+		"sass": "^1.54.6"
 	}
 }

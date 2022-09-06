@@ -3,13 +3,13 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Home app" />
+	<title>Fashion</title>
+	<meta name="description" content="Fashion this app" />
 </svelte:head>
 
-<div class="row pt-md-4">
+<div class="row px-md-4">
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -61,7 +61,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -87,7 +87,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -141,7 +141,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -167,7 +167,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -193,7 +193,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -219,7 +219,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -245,7 +245,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -271,8 +271,8 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<!-- svelte-ignore a11y-missing-content -->
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
+			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
 				class="img img-2"
@@ -297,7 +297,7 @@
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="blog-entry animated d-md-flex">
+		<div class="blog-entry ftco-animate d-md-flex">
 			<!-- svelte-ignore a11y-missing-content -->
 			<a
 				href="single.html"
@@ -324,7 +324,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col">
+	<div class="col text-center text-md-left">
 		<Pagination />
 	</div>
 </div>
