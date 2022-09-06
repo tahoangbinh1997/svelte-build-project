@@ -1,6 +1,5 @@
 <script lang="ts">
 	import LeftSideBar from '$lib/left-sidebar/LeftSideBar.svelte'
-	import RightSideBar from '$lib/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
 	import { reveal } from '../common/utils'
 	import '../app.scss'
@@ -13,18 +12,9 @@
 	<LeftSideBar />
 	<div id="colorlib-main">
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
-			<div class="container">
-				<div class="row d-flex">
-					<div class="col-xl-8 py-5 px-md-5 animated">
-						<main>
-							<slot />
-						</main>
-					</div>
-					<div class="col-xl-4 sidebar bg-light pt-5 animated" id="right-sidebar">
-						<RightSideBar />
-					</div>
-				</div>
-			</div>
+			<main>
+				<slot />
+			</main>
 		</section>
 	</div>
 </div>
