@@ -7,7 +7,7 @@
 <!-- svelte-ignore a11y-invalid-attribute -->
 <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i /></a>
 <!-- svelte-ignore a11y-no-redundant-roles -->
-<aside id="colorlib-aside" role="complementary" class="js-fullheight animated">
+<aside id="colorlib-aside" role="complementary" class="js-fullheight" data-aos="fade-up">
 	<!-- svelte-ignore a11y-no-redundant-roles -->
 	<nav id="colorlib-main-menu" role="navigation">
 		<ul>

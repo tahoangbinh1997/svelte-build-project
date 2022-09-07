@@ -1,5 +1,5 @@
 <div class="block-27">
-	<ul class="animated">
+	<ul>
 		<!-- svelte-ignore a11y-invalid-attribute -->
 		<li><a href="#">&lt;</a></li>
 		<li class="active"><span>1</span></li>
