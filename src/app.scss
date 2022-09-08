@@ -5135,11 +5135,11 @@ body {
 	color: #666;
 }
 
-body.offcanvas {
+.offcanvas {
 	overflow-x: hidden;
 }
 
-body.offcanvas #colorlib-aside {
+.offcanvas #colorlib-aside {
 	-moz-transform: translateX(0);
 	-webkit-transform: translateX(0);
 	-ms-transform: translateX(0);
@@ -5151,14 +5151,22 @@ body.offcanvas #colorlib-aside {
 	position: fixed;
 }
 
-body.offcanvas #colorlib-main,
-body.offcanvas .colorlib-nav-toggle {
+.offcanvas #colorlib-main,
+.offcanvas .colorlib-nav-toggle {
 	top: 0;
 	-moz-transform: translateX(270px);
 	-webkit-transform: translateX(270px);
 	-ms-transform: translateX(270px);
 	-o-transform: translateX(270px);
 	transform: translateX(270px);
+}
+
+.layout-blur {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	z-index: 10;
 }
 
 a {
@@ -6345,13 +6353,13 @@ textarea.form-control {
 	padding: 0 !important;
 }
 
-[data-aos="fade-in"] {
-  opacity: 0;
-  transition-property: transform, opacity;
+[data-aos='fade-in'] {
+	opacity: 0;
+	transition-property: transform, opacity;
 	visibility: hidden;
 
-  &.aos-animate {
-    opacity: 1;
+	&.aos-animate {
+		opacity: 1;
 		visibility: visible;
-  }
+	}
 }

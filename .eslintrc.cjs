@@ -23,6 +23,7 @@ module.exports = {
 		'no-console': 2,
 		semi: ['error', 'never'],
 		'@typescript-eslint/no-inferrable-types': 'off',
+		'@typescript-eslint/ban-types': 'off'
 	},
 	globals: {
 		google: 'readonly'
