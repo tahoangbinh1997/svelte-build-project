@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="sidebar-box pt-md-4 animated">
+<div class="sidebar-box pt-md-4" data-aos="fade-up">
 	<form action="#" class="search-form">
 		<div class="form-group">
 			<span class="icon icon-search" />
@@ -9,7 +9,7 @@
 		</div>
 	</form>
 </div>
-<div class="sidebar-box animated">
+<div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Categories</h3>
 	<ul class="categories">
 		<!-- svelte-ignore a11y-invalid-attribute -->
@@ -25,12 +25,12 @@
 		<!-- svelte-ignore a11y-invalid-attribute -->
 	</ul>
 </div>
-<div class="sidebar-box animated">
+<div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Popular Articles</h3>
 	<div class="block-21 mb-4 d-flex">
 		<div
 			class="blog-img mr-4"
-			style="background-image:url(images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
+			style="background-image:url(/images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
 		/>
 		<div class="text">
 			<h3 class="heading">
@@ -50,7 +50,7 @@
 	<div class="block-21 mb-4 d-flex">
 		<div
 			class="blog-img mr-4"
-			style="background-image:url(images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
+			style="background-image:url(/images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
 		/>
 		<div class="text">
 			<h3 class="heading">
@@ -70,7 +70,7 @@
 	<div class="block-21 mb-4 d-flex">
 		<div
 			class="blog-img mr-4"
-			style="background-image:url(images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
+			style="background-image:url(/images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
 		/>
 		<div class="text">
 			<h3 class="heading">
@@ -88,7 +88,7 @@
 		</div>
 	</div>
 </div>
-<div class="sidebar-box animated">
+<div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Tag Cloud</h3>
 	<ul class="tagcloud">
 		<!-- svelte-ignore a11y-invalid-attribute -->
@@ -110,8 +110,11 @@
 	</ul>
 </div>
 <div
-	class="sidebar-box subs-wrap img py-4 animated"
-	style="background-image:url(images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
+	class="sidebar-box subs-wrap img py-4"
+	data-aos="fade-up"
+	data-aos-offset="200"
+	data-aos-delay="200"
+	style="background-image:url(/images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
 >
 	<div class="overlay" />
 	<h3 class="mb-4 sidebar-heading">Newsletter</h3>
@@ -123,7 +126,7 @@
 		</div>
 	</form>
 </div>
-<div class="sidebar-box animated">
+<div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Archives</h3>
 	<ul class="categories">
 		<!-- svelte-ignore a11y-invalid-attribute -->
@@ -140,7 +143,7 @@
 		<li><a href="#">May 2018 <span>(5)</span></a></li>
 	</ul>
 </div>
-<div class="sidebar-box animated">
+<div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Paragraph</h3>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus

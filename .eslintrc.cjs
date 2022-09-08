@@ -17,9 +17,14 @@ module.exports = {
 		es2017: true,
 		node: true
 	},
-  rules: {
-    'no-unused-vars': 'off',
-    'no-console': 2,
-    semi: ['error', 'never'],
-  },
-};
+	rules: {
+		'@typescript-eslint/no-explicit-any': ['off'],
+		'no-unused-vars': 'off',
+		'no-console': 2,
+		semi: ['error', 'never'],
+		'@typescript-eslint/no-inferrable-types': 'off',
+	},
+	globals: {
+		google: 'readonly'
+	}
+}

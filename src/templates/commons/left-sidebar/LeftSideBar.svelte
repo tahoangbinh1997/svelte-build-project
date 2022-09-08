@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const currentYear: any = String(new Date().getFullYear())
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
 <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i /></a>
 <!-- svelte-ignore a11y-no-redundant-roles -->
-<aside id="colorlib-aside" role="complementary" class="js-fullheight animated">
+<aside id="colorlib-aside" role="complementary" class="js-fullheight" data-aos="fade-up">
 	<!-- svelte-ignore a11y-no-redundant-roles -->
 	<nav id="colorlib-main-menu" role="navigation">
 		<ul>
@@ -17,7 +16,10 @@
 			<li class:colorlib-active={$page.url.pathname === '/fashion'}>
 				<a href="/fashion">Fashion</a>
 			</li>
-			<li class:colorlib-active={$page.url.pathname === '/travel'}>
+			<li
+				class:colorlib-active={$page.url.pathname === '/travel' ||
+					$page.url.pathname.includes('/travel/')}
+			>
 				<a href="/travel">Travel</a>
 			</li>
 			<li class:colorlib-active={$page.url.pathname === '/about'}>
@@ -30,9 +32,8 @@
 	</nav>
 	<div class="colorlib-footer">
 		<h1 id="colorlib-logo" class="mb-4">
-			<a
-				href="index-2.html"
-				style="background-image:url(images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="/" style="background-image:url(/images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
 				>Andrea <span>Moore</span></a
 			>
 		</h1>
