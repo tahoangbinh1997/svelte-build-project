@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const currentYear: any = String(new Date().getFullYear())
 </script>
 
