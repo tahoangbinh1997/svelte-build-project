@@ -1,7 +1,6 @@
 <script lang="ts">
 	import AOS from 'aos'
-	import LeftSideBar from '$lib/left-sidebar/LeftSideBar.svelte'
-	import { reveal } from '../common/utils'
+	import LeftSideBar from '../templates/commons/left-sidebar/LeftSideBar.svelte'
 	import { loading } from '../store/index'
 	import '../app.scss'
 	import 'aos/dist/aos.css'
@@ -30,7 +29,6 @@
 	})
 </script>
 
-<svelte:window on:scroll={() => reveal()} />
 <div id="colorlib-page">
 	<LeftSideBar />
 	<div id="colorlib-main">

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Pagination from '$lib/pagination/Pagination.svelte'
-	import RightSideBar from '$lib/right-sidebar/RightSideBar.svelte'
+	import Pagination from '../templates/commons/pagination/Pagination.svelte'
+	import RightSideBar from '../templates/commons/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
 	import { loading } from '../store/index'
 
@@ -26,18 +26,21 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
+									style="background-image:url(/images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">A Loving Heart is the Truest Wisdom</a>
+										<a href="/travel/hello-world">A Loving Heart is the Truest Wisdom</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>
@@ -58,18 +61,21 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
+									style="background-image:url(/images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">Great Things Never Came from Comfort Zone</a>
+										<a href="/travel/hello-world">Great Things Never Came from Comfort Zone</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>
@@ -90,16 +96,16 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
+									style="background-image:url(/images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
-									<h3 class="mb-2"><a href="single.html">Paths Are Made by Walking</a></h3>
+									<h3 class="mb-2"><a href="/travel/hello-world">Paths Are Made by Walking</a></h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Lifestyle</a></span>
+											<span><a href="/travel/hello-world">Lifestyle</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -120,18 +126,18 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_4.jpg.pagespeed.ic.5KyQb-yudD.jpg)"
+									style="background-image:url(/images/ximage_4.jpg.pagespeed.ic.5KyQb-yudD.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">The Secret of Getting Ahead is Getting Started</a>
+										<a href="/travel/hello-world">The Secret of Getting Ahead is Getting Started</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Nature</a></span>
+											<span><a href="/travel/hello-world">Nature</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -152,18 +158,18 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_5.jpg.pagespeed.ic.xoHIk35385.jpg)"
+									style="background-image:url(/images/ximage_5.jpg.pagespeed.ic.xoHIk35385.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Lifestyle</a></span>
+											<span><a href="/travel/hello-world">Lifestyle</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -184,18 +190,18 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_6.jpg.pagespeed.ic.8DytWEXWGZ.jpg)"
+									style="background-image:url(/images/ximage_6.jpg.pagespeed.ic.8DytWEXWGZ.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Travel</a></span>
+											<span><a href="/travel/hello-world">Travel</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -216,18 +222,18 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_7.jpg.pagespeed.ic.od6DA35UIk.jpg)"
+									style="background-image:url(/images/ximage_7.jpg.pagespeed.ic.od6DA35UIk.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Travel</a></span>
+											<span><a href="/travel/hello-world">Travel</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -248,18 +254,21 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_8.jpg.pagespeed.ic.k6KCknfXQH.jpg)"
+									style="background-image:url(/images/ximage_8.jpg.pagespeed.ic.k6KCknfXQH.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>
@@ -280,18 +289,21 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_9.jpg.pagespeed.ic.E1wf1dWUIg.jpg)"
+									style="background-image:url(/images/ximage_9.jpg.pagespeed.ic.E1wf1dWUIg.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>
@@ -312,18 +324,18 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_10.jpg.pagespeed.ic.ayKelK-QSW.jpg)"
+									style="background-image:url(/images/ximage_10.jpg.pagespeed.ic.ayKelK-QSW.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span>Dec 14, 2018</span>
-											<span><a href="single.html">Lifestyle</a></span>
+											<span><a href="/travel/hello-world">Lifestyle</a></span>
 											<span>5 Comment</span>
 										</p>
 									</div>
@@ -344,18 +356,21 @@
 							<!-- svelte-ignore a11y-missing-content -->
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_11.jpg.pagespeed.ic.6xbzAJITq9.jpg)"
+									style="background-image:url(/images/ximage_11.jpg.pagespeed.ic.6xbzAJITq9.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>
@@ -376,18 +391,21 @@
 							<div class="blog-entry d-md-flex" data-aos="fade-up">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img img-2"
-									style="background-image:url(images/ximage_12.jpg.pagespeed.ic.U-egCdVO1Y.jpg)"
+									style="background-image:url(/images/ximage_12.jpg.pagespeed.ic.U-egCdVO1Y.jpg)"
 								/>
 								<div class="text text-2 pl-md-4">
 									<h3 class="mb-2">
-										<a href="single.html">You Can't Blame Gravity for Falling in Love</a>
+										<a href="/travel/hello-world">You Can't Blame Gravity for Falling in Love</a>
 									</h3>
 									<div class="meta-wrap">
 										<p class="meta">
 											<span><i class="icon-calendar mr-2" />June 28, 2019</span>
-											<span><a href="single.html"><i class="icon-folder-o mr-2" />Travel</a></span>
+											<span
+												><a href="/travel/hello-world"><i class="icon-folder-o mr-2" />Travel</a
+												></span
+											>
 											<span><i class="icon-comment2 mr-2" />5 Comment</span>
 										</p>
 									</div>

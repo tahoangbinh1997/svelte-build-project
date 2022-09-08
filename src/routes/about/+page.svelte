@@ -23,7 +23,7 @@
 					<div
 						data-aos="fade-in"
 						class="img d-flex align-self-stretch align-items-center js-fullheight"
-						style="background-image:url(images/xabout.jpg.pagespeed.ic.Ws6-XUQzFw.jpg)"
+						style="background-image:url(/images/xabout.jpg.pagespeed.ic.Ws6-XUQzFw.jpg)"
 					/>
 				</div>
 				<div class="col-md-6 d-flex align-items-center" data-aos="fade-up">

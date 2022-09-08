@@ -1,34 +1,34 @@
 @font-face {
 	font-family: Icons;
-	src: url(fonts/open-iconic/open-iconic.eot);
-	src: url(fonts/open-iconic/open-iconicd41d.eot?#iconic-sm) format('embedded-opentype'),
-		url(fonts/open-iconic/open-iconic.woff) format('woff'),
-		url(fonts/open-iconic/open-iconic.ttf) format('truetype'),
-		url(fonts/open-iconic/open-iconic.otf) format('opentype'),
-		url(fonts/open-iconic/open-iconic.svg#iconic-sm) format('svg');
+	src: url(/fonts/open-iconic/open-iconic.eot);
+	src: url(/fonts/open-iconic/open-iconicd41d.eot?#iconic-sm) format('embedded-opentype'),
+		url(/fonts/open-iconic/open-iconic.woff) format('woff'),
+		url(/fonts/open-iconic/open-iconic.ttf) format('truetype'),
+		url(/fonts/open-iconic/open-iconic.otf) format('opentype'),
+		url(/fonts/open-iconic/open-iconic.svg#iconic-sm) format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Ionicons';
-	src: url(fonts/ionicons/fonts/ionicons580c.eot?v=4.0.0-19);
-	src: url(fonts/ionicons/fonts/ionicons580c.eot?v=4.0.0-19#iefix) format('embedded-opentype'),
-		url(fonts/ionicons/fonts/ionicons580c.woff2?v=4.0.0-19) format('woff2'),
-		url(fonts/ionicons/fonts/ionicons580c.woff?v=4.0.0-19) format('woff'),
-		url(fonts/ionicons/fonts/ionicons580c.ttf?v=4.0.0-19) format('truetype'),
-		url(fonts/ionicons/fonts/ionicons580c.svg?v=4.0.0-19#Ionicons) format('svg');
+	src: url(/fonts/ionicons/fonts/ionicons580c.eot?v=4.0.0-19);
+	src: url(/fonts/ionicons/fonts/ionicons580c.eot?v=4.0.0-19#iefix) format('embedded-opentype'),
+		url(/fonts/ionicons/fonts/ionicons580c.woff2?v=4.0.0-19) format('woff2'),
+		url(/fonts/ionicons/fonts/ionicons580c.woff?v=4.0.0-19) format('woff'),
+		url(/fonts/ionicons/fonts/ionicons580c.ttf?v=4.0.0-19) format('truetype'),
+		url(/fonts/ionicons/fonts/ionicons580c.svg?v=4.0.0-19#Ionicons) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Flaticon';
-	src: url(fonts/flaticon/font/Flaticon.eot);
-	src: url(fonts/flaticon/font/Flaticond41d.eot?#iefix) format('embedded-opentype'),
-		url(fonts/flaticon/font/Flaticon.woff) format('woff'),
-		url(fonts/flaticon/font/Flaticon.ttf) format('truetype'),
-		url(fonts/flaticon/font/Flaticon.svg#Flaticon) format('svg');
+	src: url(/fonts/flaticon/font/Flaticon.eot);
+	src: url(/fonts/flaticon/font/Flaticond41d.eot?#iefix) format('embedded-opentype'),
+		url(/fonts/flaticon/font/Flaticon.woff) format('woff'),
+		url(/fonts/flaticon/font/Flaticon.ttf) format('truetype'),
+		url(/fonts/flaticon/font/Flaticon.svg#Flaticon) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -36,17 +36,17 @@
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	@font-face {
 		font-family: 'Flaticon';
-		src: url(fonts/flaticon/font/Flaticon.svg#Flaticon) format('svg');
+		src: url(/fonts/flaticon/font/Flaticon.svg#Flaticon) format('svg');
 	}
 }
 
 @font-face {
 	font-family: 'icomoon';
-	src: url(fonts/icomoon/icomoonccfb.eot?6tt51o);
-	src: url(fonts/icomoon/icomoonccfb.eot?6tt51o#iefix) format('embedded-opentype'),
-		url(fonts/icomoon/icomoonccfb.ttf?6tt51o) format('truetype'),
-		url(fonts/icomoon/icomoonccfb.woff?6tt51o) format('woff'),
-		url(fonts/icomoon/icomoonccfb.svg?6tt51o#icomoon) format('svg');
+	src: url(/fonts/icomoon/icomoonccfb.eot?6tt51o);
+	src: url(/fonts/icomoon/icomoonccfb.eot?6tt51o#iefix) format('embedded-opentype'),
+		url(/fonts/icomoon/icomoonccfb.ttf?6tt51o) format('truetype'),
+		url(/fonts/icomoon/icomoonccfb.woff?6tt51o) format('woff'),
+		url(/fonts/icomoon/icomoonccfb.svg?6tt51o#icomoon) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

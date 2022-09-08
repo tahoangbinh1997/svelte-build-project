@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Pagination from '$lib/pagination/Pagination.svelte'
-	import RightSideBar from '$lib/right-sidebar/RightSideBar.svelte'
+	import Pagination from '../../templates/commons/pagination/Pagination.svelte'
+	import RightSideBar from '../../templates/commons/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
 	import { loading } from '../../store/index'
 
@@ -27,14 +27,14 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
+									style="background-image:url(/images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
 										<!-- svelte-ignore a11y-invalid-attribute -->
-										<a href="#">A Loving Heart is the Truest Wisdom</a>
+										<a href="/travel/hello-world">A Loving Heart is the Truest Wisdom</a>
 									</h3>
 									<p class="mb-4">
 										Even the all-powerful Pointing has no control about the blind texts it is an
@@ -45,9 +45,9 @@
 										<!-- svelte-ignore a11y-missing-content -->
 										<!-- svelte-ignore a11y-invalid-attribute -->
 										<a
-											href="#"
+											href="/travel/hello-world"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -80,9 +80,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
+									style="background-image:url(/images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -100,7 +100,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -132,9 +132,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
+									style="background-image:url(/images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -152,7 +152,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -184,9 +184,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_4.jpg.pagespeed.ic.5KyQb-yudD.jpg)"
+									style="background-image:url(/images/ximage_4.jpg.pagespeed.ic.5KyQb-yudD.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -204,7 +204,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -236,9 +236,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_5.jpg.pagespeed.ic.xoHIk35385.jpg)"
+									style="background-image:url(/images/ximage_5.jpg.pagespeed.ic.xoHIk35385.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -256,7 +256,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -288,9 +288,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_6.jpg.pagespeed.ic.8DytWEXWGZ.jpg)"
+									style="background-image:url(/images/ximage_6.jpg.pagespeed.ic.8DytWEXWGZ.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -308,7 +308,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -340,9 +340,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_7.jpg.pagespeed.ic.od6DA35UIk.jpg)"
+									style="background-image:url(/images/ximage_7.jpg.pagespeed.ic.od6DA35UIk.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -360,7 +360,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>
@@ -392,9 +392,9 @@
 							<div class="blog-entry-2">
 								<!-- svelte-ignore a11y-missing-content -->
 								<a
-									href="single.html"
+									href="/travel/hello-world"
 									class="img"
-									style="background-image:url(images/ximage_8.jpg.pagespeed.ic.k6KCknfXQH.jpg)"
+									style="background-image:url(/images/ximage_8.jpg.pagespeed.ic.k6KCknfXQH.jpg)"
 								/>
 								<div class="text pt-4">
 									<h3 class="mb-4">
@@ -412,7 +412,7 @@
 										<a
 											href="#"
 											class="img"
-											style="background-image:url(images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
+											style="background-image:url(/images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg)"
 										/>
 										<div class="ml-3 info">
 											<span>Written by</span>

@@ -2,56 +2,61 @@
 	import { onMount } from 'svelte'
 	import { loading } from '../../store/index'
 
-	// let container: any
-	// let map: any
-	// let service: any
-	// let infowindow: any
-	// let zoom: number = 15
-	// let center: any = { lat: 51.5127494, lng: 7.4829757 }
+	let container: any
+	let map: any
+	let service: any
+	let infoWindow: any
+	let zoom: number = 15
+	let center: any = { lat: 51.5127494, lng: 7.4829757 }
 
-	onMount(() => {
+	const googleApis = (time) => {
+		return new Promise((resolve) =>
+			setTimeout(() => {
+				loading.set(false)
+				resolve(() => true)
+			}, time)
+		)
+	}
+
+	onMount(async () => {
 		loading.set(true)
-		setTimeout(function () {
-			loading.set(false)
-		}, 500)
+		await googleApis(500)
+
+		const options = {
+			zoom,
+			center
+		}
+		// setup the general Map with the provided options
+		map = new google.maps.Map(container, options)
+
+		// query the Google Places API
+		const request = {
+			query: 'ShipBit',
+			fields: ['name', 'geometry']
+		}
+		service = new google.maps.places.PlacesService(map)
+
+		// create a custom marker at the found place
+		service.findPlaceFromQuery(request, (results: any, status: any) => {
+			if (status === google.maps.places.PlacesServiceStatus.OK) {
+				for (let i = 0; i < results.length; i++) {
+					const place = results[i]
+					const marker = new google.maps.Marker({
+						map,
+						position: place.geometry.location
+					})
+
+					marker.addListener('click', () => {
+						infoWindow = new google.maps.InfoWindow({
+							content: `Add your marker HTML content here`
+						})
+						infoWindow.open(map, marker)
+					})
+				}
+				map.setCenter(results[0].geometry.location)
+			}
+		})
 	})
-
-	// $: if (container && google) {
-	// 	const options = {
-	// 		zoom,
-	// 		center
-	// 	}
-	// 	// setup the general Map with the provided options
-	// 	map = new google.maps.Map(container, options)
-
-	// 	// query the Google Places API
-	// 	const request = {
-	// 		query: 'ShipBit',
-	// 		fields: ['name', 'geometry']
-	// 	}
-	// 	service = new google.maps.places.PlacesService(map)
-
-	// 	// create a custom marker at the found place
-	// 	service.findPlaceFromQuery(request, (results: any, status: any) => {
-	// 		if (status === google.maps.places.PlacesServiceStatus.OK) {
-	// 			for (let i = 0; i < results.length; i++) {
-	// 				const place = results[i]
-	// 				const marker = new google.maps.Marker({
-	// 					map,
-	// 					position: place.geometry.location
-	// 				})
-
-	// 				marker.addListener('click', () => {
-	// 					infowindow = new google.maps.InfoWindow({
-	// 						content: `Add your marker HTML content here`
-	// 					})
-	// 					infowindow.open(map, marker)
-	// 				})
-	// 			}
-	// 			map.setCenter(results[0].geometry.location)
-	// 		}
-	// 	})
-	// }
 </script>
 
 <svelte:head>
@@ -60,7 +65,7 @@
 	<script
 		defer
 		async
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp">
 	</script>
 </svelte:head>
 
@@ -130,7 +135,7 @@
 					</form>
 				</div>
 				<div class="col-lg-6 d-flex">
-					<!-- <div id="map" class="bg-light map" bind:this={container} /> -->
+					<div id="map" class="bg-light map" bind:this={container} />
 				</div>
 			</div>
 		</div>

@@ -17,7 +17,10 @@
 			<li class:colorlib-active={$page.url.pathname === '/fashion'}>
 				<a href="/fashion">Fashion</a>
 			</li>
-			<li class:colorlib-active={$page.url.pathname === '/travel'}>
+			<li
+				class:colorlib-active={$page.url.pathname === '/travel' ||
+					$page.url.pathname.includes('/travel/')}
+			>
 				<a href="/travel">Travel</a>
 			</li>
 			<li class:colorlib-active={$page.url.pathname === '/about'}>
@@ -30,9 +33,8 @@
 	</nav>
 	<div class="colorlib-footer">
 		<h1 id="colorlib-logo" class="mb-4">
-			<a
-				href="index-2.html"
-				style="background-image:url(images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="/" style="background-image:url(/images/xbg_1.jpg.pagespeed.ic.yyDakF8d8Y.jpg)"
 				>Andrea <span>Moore</span></a
 			>
 		</h1>
