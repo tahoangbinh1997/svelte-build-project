@@ -50,7 +50,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -85,7 +85,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -115,7 +115,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -147,7 +147,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -179,7 +179,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -211,7 +211,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -243,7 +243,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -278,7 +278,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -313,7 +313,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -345,7 +345,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -380,7 +380,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>
@@ -415,7 +415,7 @@
 									</p>
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<p>
-										<a href="#" class="btn-custom"
+										<a href="travel/hello-world" class="btn-custom"
 											>Read More <span class="ion-ios-arrow-forward" /></a
 										>
 									</p>

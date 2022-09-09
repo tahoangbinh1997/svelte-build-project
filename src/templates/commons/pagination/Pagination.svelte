@@ -1,17 +1,51 @@
-<div class="block-27">
-	<ul>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">&lt;</a></li>
-		<li class="active"><span>1</span></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">2</a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">3</a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">4</a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">5</a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">&gt;</a></li>
-	</ul>
-</div>
+<script lang="ts">
+	import { PaginationNav } from 'carbon-components-svelte'
+</script>
+
+<PaginationNav shown={7} />
+
+<style type="text/scss">
+	:global(.bx--pagination-nav__list-item) {
+		width: 40px;
+		height: 40px;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	:global(.bx--pagination-nav__page.bx--pagination-nav__page, .bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {
+		min-width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		border: 1px solid #1eafed;
+	}
+
+	:global(.bx--pagination-nav__page) {
+		&:hover {
+			background-color: none !important;
+		}
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	:global(.bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {
+		min-width: 40px;
+		min-height: 40px;
+		width: 40px;
+		height: 40px;
+	}
+
+	:global(.bx--pagination-nav__page.bx--pagination-nav__page--active) {
+		background: #1eafed !important;
+		color: white !important;
+	}
+
+	:global(.bx--pagination-nav__page:not(.bx--pagination-nav__page--direction)::after) {
+		content: none !important;
+	}
+</style>
