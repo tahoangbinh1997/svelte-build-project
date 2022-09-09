@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import AOS from 'aos'
 	import LeftSideBar from '../templates/commons/left-sidebar/LeftSideBar.svelte'
 	import { loading } from '../store/index'
 	import '../app.scss'
 	import 'aos/dist/aos.css'
-	import { onMount } from 'svelte'
+	import 'carbon-components-svelte/css/white.css'
+
 	onMount(() => {
 		AOS.init({
 			// Global settings:
