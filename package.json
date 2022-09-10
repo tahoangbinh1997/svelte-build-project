@@ -12,7 +12,8 @@
 		"prepare": "husky install",
 		"lint": "eslint --max-warnings=0 \"./src/**/*.{js,ts,tsx,svelte}\"",
 		"lint:fix": "eslint --fix \"./src/**/*.{js,ts,tsx,svelte}\"",
-		"format": "prettier --write \"{public,src}/**/*.{css,html,js,ts,tsx,svelte}\""
+		"format": "prettier --write \"{public,src}/**/*.{css,html,js,ts,tsx,svelte}\"",
+		"kit-prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "^2.12.0",
