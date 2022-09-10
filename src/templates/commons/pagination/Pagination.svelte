@@ -4,7 +4,7 @@
 
 <PaginationNav shown={7} />
 
-<style type="text/scss">
+<style lang="scss">
 	:global(.bx--pagination-nav__list-item) {
 		width: 40px;
 		height: 40px;
