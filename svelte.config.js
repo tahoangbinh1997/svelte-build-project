@@ -20,7 +20,7 @@ const config = {
 	},
 	files: {
 		assets: 'static',
-		ssr: true,
+		ssr: false,
 		hydrate: true,
 		router: false,
 		// hooks: {
