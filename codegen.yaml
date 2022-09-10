@@ -1,0 +1,8 @@
+schema: http://my-graphql-api.com/graphql # Or schema: ./src/schema.graphql
+documents: './src/**/*.gql'
+generates:
+  ./graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - graphql-codegen-svelte-apollo

@@ -91,8 +91,8 @@
 					<div class="info bg-light p-4">
 						<p>
 							<span>Email:</span>
-							<a
-								href="https://preview.colorlib.com/cdn-cgi/l/email-protection#e68f888089a69f899394958f9283c885898b"
+							<!-- svelte-ignore a11y-invalid-attribute -->
+							<a href="#"
 								><span class="__cf_email__" data-cfemail="cba2a5ada48bb2a4beb9b8a2bfaee5a8a4a6"
 									>[email&#160;protected]</span
 								></a
