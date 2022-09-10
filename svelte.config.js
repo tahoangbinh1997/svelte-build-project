@@ -1,5 +1,8 @@
-import adapter from '@sveltejs/adapter-auto'
+import netlify from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
+import { readFile } from 'fs/promises'
+
+const json = JSON.parse(await readFile(new URL('./package.json', import.meta.url)))
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,17 +11,18 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({
-			// if true, will create a Netlify Edge Function rather
-			// than using standard Node-based functions
-			edge: false,
-
-			// if true, will split your app into multiple functions
-			// instead of creating a single one for the entire app.
-			// if `edge` is true, this option cannot be used
-			split: false
-		})
+		adapter: netlify()
 	},
+
+	// hydrate the <div id="svelte"> element in src/app.html
+	target: '#svelte',
+
+	vite: {
+		ssr: {
+			noExternal: Object.keys(json.dependencies || {})
+		}
+	},
+
 	files: {
 		assets: 'static',
 		ssr: true,
