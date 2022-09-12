@@ -11,14 +11,25 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter() // edge fix
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: 'app.html'
+		}) // edge fix
 	},
 
 	// hydrate the <div id="svelte"> element in src/app.html
 	target: '#svelte',
 
 	vite: {
-		ssr: {
+		build: {
+			rollupOptions: {
+				output: {
+					manualChunks: undefined
+				}
+			}
+		},
+		csr: {
 			optimizeDeps: Object.keys(json.dependencies || {})
 		}
 	},
