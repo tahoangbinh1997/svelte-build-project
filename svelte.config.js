@@ -19,7 +19,7 @@ const config = {
 
 	vite: {
 		ssr: {
-			noExternal: Object.keys(json.dependencies || {})
+			optimizeDeps: Object.keys(json.dependencies || {})
 		}
 	},
 
