@@ -20,7 +20,7 @@
 		"@graphql-codegen/typescript": "^2.7.3",
 		"@graphql-codegen/typescript-operations": "^2.5.3",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.76",
+		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
