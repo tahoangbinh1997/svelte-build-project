@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import { readFile } from 'fs/promises'
+import { searchForWorkspaceRoot } from 'vite'
 
 const json = JSON.parse(await readFile(new URL('./package.json', import.meta.url)))
 
@@ -29,7 +30,7 @@ const config = {
 				}
 			}
 		},
-		csr: {
+		ssr: {
 			optimizeDeps: Object.keys(json.dependencies || {})
 		}
 	},
@@ -39,16 +40,23 @@ const config = {
 		ssr: false,
 		hydrate: true,
 		router: true,
-		// hooks: {
-		// 	client: 'src/hooks.client',
-		// 	server: 'src/hooks.server'
-		// },
+		hooks: {
+			// client: 'src/hooks.client',
+			server: 'src/hooks.server'
+		},
 		lib: 'src/lib',
 		// params: 'src/params',
 		routes: 'src/routes',
 		// serviceWorker: 'src/service-worker',
-		appTemplate: 'src/app.html'
+		template: 'src/app.html'
 		// errorTemplate: 'src/error.html'
+	},
+
+	server: {
+		fs: {
+			// Allow serving files from one level up to the project root
+			allow: [searchForWorkspaceRoot(process.cwd()), '../', '../..']
+		}
 	}
 }
 
