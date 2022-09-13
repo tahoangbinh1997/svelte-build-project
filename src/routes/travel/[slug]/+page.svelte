@@ -1,7 +1,7 @@
 <script lang="ts">
-	import RightSideBar from '../../../templates/commons/right-sidebar/RightSideBar.svelte'
+	import RightSideBar from '$lib/components/commons/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
-	import { loading } from '../../../store/index'
+	import { loading } from '$lib/store/index'
 
 	onMount(() => {
 		loading.set(true)

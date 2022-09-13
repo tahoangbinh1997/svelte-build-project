@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import { loading } from '../../store/index'
+	import { loading } from '$lib/store/index'
 
 	onMount(() => {
 		loading.set(true)

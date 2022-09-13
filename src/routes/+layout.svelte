@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import AOS from 'aos'
-	import LeftSideBar from '../templates/commons/left-sidebar/LeftSideBar.svelte'
-	import { loading } from '../store/index'
+	import LeftSideBar from '$lib/components/commons/left-sidebar/LeftSideBar.svelte'
+	import { loading } from '$lib/store/index'
 	import '../app.scss'
 	import 'aos/dist/aos.css'
 	import 'carbon-components-svelte/css/white.css'
