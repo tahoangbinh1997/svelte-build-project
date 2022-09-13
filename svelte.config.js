@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import { readFile } from 'fs/promises'
 import { searchForWorkspaceRoot } from 'vite'
@@ -18,7 +18,7 @@ const config = {
 			// these options are set automatically — see below
 			pages: 'build',
 			assets: 'build',
-			fallback: 'app.html',
+			fallback: null,
 			precompress: false
 		})
 	},
