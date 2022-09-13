@@ -18,14 +18,9 @@ const config = {
 			// these options are set automatically — see below
 			pages: 'build',
 			assets: 'build',
-			fallback: null,
+			fallback: 'app.html',
 			precompress: false
 		})
-	},
-
-	prerender: {
-		default: true,
-		entries: ['*']
 	},
 
 	// hydrate the <div id="svelte"> element in src/app.html
