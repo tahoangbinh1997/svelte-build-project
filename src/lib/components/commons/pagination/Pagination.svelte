@@ -4,14 +4,14 @@
 
 <PaginationNav shown={7} />
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 	:global(.bx--pagination-nav__list-item) {
 		width: 40px;
 		height: 40px;
+	}
 
-		&:not(:last-child) {
-			margin-right: 5px;
-		}
+	:global(.bx--pagination-nav__list-item:not(:last-child)) {
+		margin-right: 5px;
 	}
 
 	:global(.bx--pagination-nav__page.bx--pagination-nav__page, .bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {
@@ -24,13 +24,12 @@
 		border: 1px solid #1eafed;
 	}
 
+	:global(.bx--pagination-nav__page:hover) {
+		background-color: none !important;
+	}
+
 	:global(.bx--pagination-nav__page) {
-		&:hover {
-			background-color: none !important;
-		}
-		&:focus {
-			outline: none !important;
-		}
+		outline: none !important;
 	}
 
 	:global(.bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {

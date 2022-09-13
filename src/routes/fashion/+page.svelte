@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Pagination from '../../templates/commons/pagination/Pagination.svelte'
+	import Pagination from '$lib/components/commons/pagination/Pagination.svelte'
 	import { onMount } from 'svelte'
-	import { loading } from '../../store/index'
+	import { loading } from '$lib/store/index'
 
 	onMount(() => {
 		loading.set(true)

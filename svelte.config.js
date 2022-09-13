@@ -15,7 +15,10 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'app.html'
+			out: 'build',
+			fallback: 'app.html',
+			alias: {},
+			appDir: '_app'
 		}) // edge fix
 	},
 
