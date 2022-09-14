@@ -12,10 +12,11 @@
 		"lint": "eslint --max-warnings=0 \"./src/**/*.{js,ts,tsx,svelte}\"",
 		"lint:fix": "eslint --fix \"./src/**/*.{js,ts,tsx,svelte}\"",
 		"format": "prettier --write \"{public,src}/**/*.{css,html,js,ts,tsx,svelte}\"",
-		"kit-prepare": "svelte-kit sync"
+		"postinstall": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-node": "^1.0.0-next.90",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
