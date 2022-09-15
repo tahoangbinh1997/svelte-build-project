@@ -19,7 +19,7 @@
 
 ### Build Step
 # pull the Node.js Docker image
-FROM node:16.13.1-alpine3.14
+FROM node:16.15.1-alpine3.14
 # change working directory
 WORKDIR /app
 # copy the package.json files from local machine to the workdir in container
