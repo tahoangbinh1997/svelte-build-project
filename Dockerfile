@@ -19,7 +19,7 @@
 
 ### Build Step
 # pull the Node.js Docker image
-FROM node:16.15.1-alpine3.14 AS builder
+FROM node:16.13.1-alpine3.14
 # change working directory
 WORKDIR /app
 # copy the package.json files from local machine to the workdir in container
@@ -30,15 +30,16 @@ RUN rm -rf node_modules/ && yarn install
 COPY . .
 # build the application
 RUN npm run build
-
-FROM node:16.15.1-apline3.14
-USER node:node
-WORKDIR /app
-COPY --from=builder --chown=node:node /app/build ./build
-COPY --from=builder --chown=node:node /app/node_modules ./node_modules
-COPY --chown=node:node yarn.lock .
-
 ### Serve Step
+# pull the Node.js Docker image
+# FROM node:16.14.0-alpine3.13
+# # change working directory
+# WORKDIR /app
+# # copy files from previous step
+# COPY --from=builder /usr/src/app/build .
+# COPY --from=builder /usr/src/app/package.json .
+# COPY --from=builder /usr/src/app/node_modules ./node_modules
+# # our app is running on port 3000 within the container, so need to expose it
 ENV PORT 5000
 EXPOSE 5000
 # the command that starts our app
