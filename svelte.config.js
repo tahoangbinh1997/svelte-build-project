@@ -1,4 +1,4 @@
-import adapterNode from '@sveltejs/adapter-node'
+import adapter from '@sveltejs/adapter-netlify'
 import preprocess from 'svelte-preprocess'
 import { readFile } from 'fs/promises'
 import { searchForWorkspaceRoot } from 'vite'
@@ -13,7 +13,7 @@ const config = {
 	extensions: ['.svelte', '.md'],
 
 	kit: {
-		adapter: adapterNode({
+		adapter: adapter({
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
 			pages: 'build',
