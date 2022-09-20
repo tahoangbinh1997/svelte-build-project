@@ -10,19 +10,3 @@ services:
       target: deploy-node
     ports:
       - "5050:5050"
-
-# version: "3.4"
-
-# services:
-#   client:
-#     image: client
-#     restart: on-failure
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#     ports:
-#       - 3000:3000
-#     volumes:
-#       - ./:/usr/src/app
-#       - /usr/src/app/node_modules
-#     hostname: web.local

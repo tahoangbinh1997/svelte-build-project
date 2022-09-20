@@ -13,25 +13,31 @@ export const prerender = true
 // import { error } from '@sveltejs/kit'
 import API from '../lib/api'
 
-type Pokemon = {
-	name: string
-	url: string
+type Post = {
+	Title: string
+	Description: string
+	Content: string
+	Thumbnail: any
+	Slug: string
+	categories: any
+	createdAt: string
+	createdBy: any
 }
 
 export const load = async () => {
 	// locals.userid comes from src/hooks.js
-	const response = await API.get('pokemon/', {})
+	const response = await API.get('posts', {})
 
 	if (!response.results) {
 		// user hasn't created a todo list.
 		// start with an empty array
 		return {
-			pokemons: [] as Pokemon[]
+			posts: [] as Post[]
 		}
 	}
 
 	return {
-		pokemons: response.results as Pokemon[]
+		posts: response.results as Post[]
 	}
 
 	// throw error(response.message)
