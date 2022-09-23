@@ -1,8 +1,26 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte'
 	import { PaginationNav } from 'carbon-components-svelte'
+
+	export let paginationData
+
+	const dispatch = createEventDispatcher()
+
+	function handleChangePage(event) {
+		if (paginationData.page !== event.detail.page) {
+			dispatch('changePage', {
+				page: event.detail.page
+			})
+		}
+	}
 </script>
 
-<PaginationNav shown={7} />
+<PaginationNav
+	total={paginationData?.pageCount}
+	page={paginationData?.page ? paginationData?.page - 1 : 0}
+	shown={7}
+	on:change={handleChangePage}
+/>
 
 <style lang="css" scoped>
 	:global(.bx--pagination-nav__list-item) {

@@ -2,7 +2,9 @@
 	import RightSideBar from '$lib/components/commons/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
 	import { loading } from '$lib/store/index'
+	import type { PageData } from './$types'
 
+	export let data: PageData
 	onMount(() => {
 		loading.set(true)
 		setTimeout(function () {
@@ -273,7 +275,7 @@
 					data-aos-offset="200"
 					data-aos-delay="100"
 				>
-					<RightSideBar />
+					<RightSideBar sideBarData={data} />
 				</div>
 			</div>
 		</div>
