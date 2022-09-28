@@ -2,13 +2,71 @@
 	import RightSideBar from '$lib/components/commons/right-sidebar/RightSideBar.svelte'
 	import { onMount } from 'svelte'
 	import { loading } from '$lib/store/index'
+	import type { PageData } from './$types'
+	import API from '$lib/api'
+	import { formatDate } from '$lib/utils/utils'
+	import { page } from '$app/stores'
 
-	onMount(() => {
+	type FormContent = {
+		CommenterInfos: {
+			Name: string
+			Email: string
+		}
+		Website: string
+		Content: string
+		post: any
+	}
+
+	type DetailPost = {
+		attributes: {
+			Content: string
+			Description: string
+			Slug: string
+			Thumbnail: any
+			Title: string
+			createdAt: string
+			categories: any
+			locale: string
+			publishedAt: string
+			updatedAt: string
+			updatedBy: any
+			comments: any
+		}
+		id: number
+	}
+
+	export let data: PageData
+	let detailPost: DetailPost
+
+	let formContent: FormContent = {
+		CommenterInfos: {
+			Name: '',
+			Email: ''
+		},
+		Website: '',
+		Content: '',
+		post: null
+	}
+
+	onMount(async () => {
 		loading.set(true)
-		setTimeout(function () {
-			loading.set(false)
-		}, 500)
+		await fetchData()
+		loading.set(false)
 	})
+
+	const fetchData: Function = async () => {
+		const response = await API.get(`posts/${$page.params.slug}?populate=deep`, {})
+		detailPost = (response?.data || {}) as DetailPost
+		formContent.post = detailPost.id || null
+	}
+
+	const submitHandler: Function = async () => {
+		await API.post('comments', {
+			data: formContent
+		}).then(() => {
+			fetchData()
+		})
+	}
 </script>
 
 <svelte:head>
@@ -22,80 +80,13 @@
 			<div class="row d-flex">
 				<div class="col-lg-8 px-md-5 py-5" data-aos="fade-up">
 					<div class="row pt-md-4">
-						<h1 class="mb-3">A Loving Heart is the Truest Wisdom</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia
-							suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto
-							optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse
-							minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia
-							officia optio deserunt molestiae voluptates soluta architecto tempora.
-						</p>
-						<p>
-							<!-- svelte-ignore a11y-img-redundant-alt -->
-							<img src="/images/image_1.jpg" alt="" class="img-fluid" />
-						</p>
-						<p>
-							Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis
-							repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate
-							quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi
-							deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse
-							vero ut ea, repudiandae suscipit!
-						</p>
-						<h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-						<p>
-							Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius
-							aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut
-							officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex
-							earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic
-							non? Debitis commodi aut, adipisci.
-						</p>
-						<p>
-							<!-- svelte-ignore a11y-img-redundant-alt -->
-							<img
-								src="/images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg"
-								alt=""
-								class="img-fluid"
-							/>
-						</p>
-						<p>
-							Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil
-							explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate
-							maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur
-							perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim
-							veniam, modi rem maiores.
-						</p>
-						<p>
-							Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi
-							rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum
-							consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id
-							quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore,
-							quia laboriosam harum excepturi ea.
-						</p>
-						<p>
-							Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor
-							distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci
-							modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et
-							pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae
-							numquam nam ab voluptatibus culpa, tenetur recusandae!
-						</p>
-						<p>
-							Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia
-							adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto
-							commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure,
-							reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione.
-							Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?
-						</p>
+						{@html detailPost?.attributes?.Content || ''}
 						<div class="tag-widget post-tag-container mb-5 mt-5">
 							<div class="tagcloud">
-								<!-- svelte-ignore a11y-invalid-attribute -->
-								<!-- svelte-ignore a11y-invalid-attribute -->
-								<a href="#" class="tag-cloud-link">Life</a>
-								<!-- svelte-ignore a11y-invalid-attribute -->
-								<a href="#" class="tag-cloud-link">Sport</a>
-								<!-- svelte-ignore a11y-invalid-attribute -->
-								<a href="#" class="tag-cloud-link">Tech</a>
-								<!-- svelte-ignore a11y-invalid-attribute -->
-								<a href="#" class="tag-cloud-link">Travel</a>
+								{#each detailPost?.attributes?.categories?.data || [] as category}
+									<!-- svelte-ignore a11y-invalid-attribute -->
+									<a href="#" class="tag-cloud-link">{category?.attributes?.Name || ''}</a>
+								{/each}
 							</div>
 						</div>
 						<div class="about-author d-flex p-4 bg-light">
@@ -104,7 +95,10 @@
 								<img src="/images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4" />
 							</div>
 							<div class="desc">
-								<h3>George Washington</h3>
+								<h3>
+									{detailPost?.attributes?.updatedBy?.data?.attributes?.firstname || ''}
+									{detailPost?.attributes?.updatedBy?.data?.attributes?.lastname || ''}
+								</h3>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
 									necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa
@@ -112,12 +106,30 @@
 								</p>
 							</div>
 						</div>
-						<div class="pt-5 mt-5">
-							<h3 class="mb-5 font-weight-bold">6 Comments</h3>
+						<div class="pt-5 mt-5 w-100">
+							<h3 class="mb-5 font-weight-bold">
+								{detailPost?.attributes?.comments?.data?.length || 0} Comments
+							</h3>
 							<ul class="comment-list">
-								<li class="comment">
+								{#each detailPost?.attributes?.comments?.data as comment}
+									<li class="comment">
+										<div class="vcard bio">
+											<!-- svelte-ignore a11y-img-redundant-alt -->
+											<img src="/images/person_1.jpg" alt="Image placeholder" />
+										</div>
+										<div class="comment-body">
+											<h3>{comment?.attributes?.CommenterInfos?.Name}</h3>
+											<div class="meta">
+												{formatDate(comment?.attributes?.createdAt, 'YYYY-MM-DD')}
+											</div>
+											<p>
+												{comment?.attributes?.Content}
+											</p>
+										</div>
+									</li>
+								{/each}
+								<!-- <li class="comment">
 									<div class="vcard bio">
-										<!-- svelte-ignore a11y-img-redundant-alt -->
 										<img src="/images/person_1.jpg" alt="Image placeholder" />
 									</div>
 									<div class="comment-body">
@@ -129,33 +141,12 @@
 											enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
 										</p>
 										<p>
-											<!-- svelte-ignore a11y-invalid-attribute -->
-											<a href="#" class="reply">Reply</a>
-										</p>
-									</div>
-								</li>
-								<li class="comment">
-									<div class="vcard bio">
-										<!-- svelte-ignore a11y-img-redundant-alt -->
-										<img src="/images/person_1.jpg" alt="Image placeholder" />
-									</div>
-									<div class="comment-body">
-										<h3>John Doe</h3>
-										<div class="meta">October 03, 2018 at 2:21pm</div>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
-											laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
-											enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
-										</p>
-										<p>
-											<!-- svelte-ignore a11y-invalid-attribute -->
 											<a href="#" class="reply">Reply</a>
 										</p>
 									</div>
 									<ul class="children">
 										<li class="comment">
 											<div class="vcard bio">
-												<!-- svelte-ignore a11y-img-redundant-alt -->
 												<img src="/images/person_1.jpg" alt="Image placeholder" />
 											</div>
 											<div class="comment-body">
@@ -168,14 +159,12 @@
 													nihil?
 												</p>
 												<p>
-													<!-- svelte-ignore a11y-invalid-attribute -->
 													<a href="#" class="reply">Reply</a>
 												</p>
 											</div>
 											<ul class="children">
 												<li class="comment">
 													<div class="vcard bio">
-														<!-- svelte-ignore a11y-img-redundant-alt -->
 														<img src="/images/person_1.jpg" alt="Image placeholder" />
 													</div>
 													<div class="comment-body">
@@ -188,14 +177,12 @@
 															necessitatibus, nihil?
 														</p>
 														<p>
-															<!-- svelte-ignore a11y-invalid-attribute -->
 															<a href="#" class="reply">Reply</a>
 														</p>
 													</div>
 													<ul class="children">
 														<li class="comment">
 															<div class="vcard bio">
-																<!-- svelte-ignore a11y-img-redundant-alt -->
 																<img src="/images/person_1.jpg" alt="Image placeholder" />
 															</div>
 															<div class="comment-body">
@@ -208,7 +195,6 @@
 																	impedit necessitatibus, nihil?
 																</p>
 																<p>
-																	<!-- svelte-ignore a11y-invalid-attribute -->
 																	<a href="#" class="reply">Reply</a>
 																</p>
 															</div>
@@ -218,46 +204,56 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li class="comment">
-									<div class="vcard bio">
-										<!-- svelte-ignore a11y-img-redundant-alt -->
-										<img src="/images/person_1.jpg" alt="Image placeholder" />
-									</div>
-									<div class="comment-body">
-										<h3>John Doe</h3>
-										<div class="meta">October 03, 2018 at 2:21pm</div>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
-											laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
-											enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
-										</p>
-										<p>
-											<!-- svelte-ignore a11y-invalid-attribute -->
-											<a href="#" class="reply">Reply</a>
-										</p>
-									</div>
-								</li>
+								</li> -->
 							</ul>
 
 							<div class="comment-form-wrap pt-5">
 								<h3 class="mb-5">Leave a comment</h3>
-								<form action="#" class="p-3 p-md-5 bg-light">
+								<form
+									method="post"
+									on:submit|preventDefault={() => submitHandler()}
+									class="p-3 p-md-5 bg-light"
+								>
 									<div class="form-group">
 										<label for="name">Name *</label>
-										<input type="text" class="form-control" id="name" />
+										<input
+											type="text"
+											class="form-control"
+											id="name"
+											name="name"
+											bind:value={formContent.CommenterInfos.Name}
+										/>
 									</div>
 									<div class="form-group">
 										<label for="email">Email *</label>
-										<input type="email" class="form-control" id="email" />
+										<input
+											type="email"
+											class="form-control"
+											id="email"
+											name="email"
+											bind:value={formContent.CommenterInfos.Email}
+										/>
 									</div>
 									<div class="form-group">
 										<label for="website">Website</label>
-										<input type="url" class="form-control" id="website" />
+										<input
+											type="url"
+											class="form-control"
+											id="website"
+											name="website"
+											bind:value={formContent.Website}
+										/>
 									</div>
 									<div class="form-group">
 										<label for="message">Message</label>
-										<textarea name="" id="message" cols="30" rows="10" class="form-control" />
+										<textarea
+											name="message"
+											id="message"
+											cols="30"
+											rows="10"
+											class="form-control"
+											bind:value={formContent.Content}
+										/>
 									</div>
 									<div class="form-group">
 										<input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary" />
@@ -273,7 +269,7 @@
 					data-aos-offset="200"
 					data-aos-delay="100"
 				>
-					<RightSideBar />
+					<RightSideBar sideBarData={data} />
 				</div>
 			</div>
 		</div>

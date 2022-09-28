@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { formatDate } from '$lib/utils/utils'
+
+	export let sideBarData
 </script>
 
 <div class="sidebar-box pt-md-4" data-aos="fade-up">
@@ -12,101 +15,59 @@
 <div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Categories</h3>
 	<ul class="categories">
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">Fashion <span>(6)</span></a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">Technology <span>(8)</span></a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">Travel <span>(2)</span></a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">Food <span>(2)</span></a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<li><a href="#">Photography <span>(7)</span></a></li>
-		<!-- svelte-ignore a11y-invalid-attribute -->
+		{#each sideBarData?.categories || [] as category}
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<li>
+				<a href="#"
+					>{category?.attributes?.Name || ''}
+					<span>({category?.attributes?.posts?.data?.length || 0})</span></a
+				>
+			</li>
+		{/each}
 	</ul>
 </div>
 <div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Popular Articles</h3>
-	<div class="block-21 mb-4 d-flex">
-		<div
-			class="blog-img mr-4"
-			style="background-image:url(/images/ximage_1.jpg.pagespeed.ic.HkfdBUS8CU.jpg)"
-		/>
-		<div class="text">
-			<h3 class="heading">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="#">Even the all-powerful Pointing has no control</a>
-			</h3>
-			<div class="meta">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-calendar" /> June 28, 2019</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-person" /> Dave Lewis</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-chat" /> 19</a></div>
+	{#each sideBarData?.posts || [] as post}
+		<div class="block-21 mb-4 d-flex">
+			<div
+				class="blog-img mr-4"
+				style="background-image:url(http://localhost:1337{post?.attributes?.Thumbnail?.data
+					?.attributes?.url || ''})"
+			/>
+			<div class="text">
+				<h3 class="heading">
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<a href="#">{post?.attributes?.Title}</a>
+				</h3>
+				<div class="meta">
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<div>
+						<a href="#"
+							><span class="icon-calendar" />
+							{formatDate(post.attributes.publishedAt, 'YYYY-MM-DD')}</a
+						>
+					</div>
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- <div><a href="#"><span class="icon-person" /> Dave Lewis</a></div> -->
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<div>
+						<a href="#"
+							><span class="icon-chat" /> {post?.attributes?.comments?.data?.length || 0}</a
+						>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="block-21 mb-4 d-flex">
-		<div
-			class="blog-img mr-4"
-			style="background-image:url(/images/ximage_2.jpg.pagespeed.ic.hn6JeducHP.jpg)"
-		/>
-		<div class="text">
-			<h3 class="heading">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="#">Even the all-powerful Pointing has no control</a>
-			</h3>
-			<div class="meta">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-calendar" /> June 28, 2019</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-person" /> Dave Lewis</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-chat" /> 19</a></div>
-			</div>
-		</div>
-	</div>
-	<div class="block-21 mb-4 d-flex">
-		<div
-			class="blog-img mr-4"
-			style="background-image:url(/images/ximage_3.jpg.pagespeed.ic.KZ6VUtC5Rz.jpg)"
-		/>
-		<div class="text">
-			<h3 class="heading">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="#">Even the all-powerful Pointing has no control</a>
-			</h3>
-			<div class="meta">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-calendar" /> June 28, 2019</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-person" /> Dave Lewis</a></div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<div><a href="#"><span class="icon-chat" /> 19</a></div>
-			</div>
-		</div>
-	</div>
+	{/each}
 </div>
 <div class="sidebar-box" data-aos="fade-up">
 	<h3 class="sidebar-heading">Tag Cloud</h3>
 	<ul class="tagcloud">
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">animals</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">human</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">people</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">cat</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">dog</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">nature</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">leaves</a>
-		<!-- svelte-ignore a11y-invalid-attribute -->
-		<a href="#" class="tag-cloud-link">food</a>
+		{#each sideBarData?.tags || [] as tag}
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="#" class="tag-cloud-link">{tag?.attributes?.Name || ''}</a>
+		{/each}
 	</ul>
 </div>
 <div

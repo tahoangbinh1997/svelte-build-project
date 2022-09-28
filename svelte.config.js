@@ -42,8 +42,8 @@ const config = {
 	files: {
 		assets: 'static',
 		ssr: false,
-		hydrate: true,
-		router: true,
+		hydrate: false,
+		router: false,
 		hooks: {
 			// client: 'src/hooks.client',
 			server: 'src/hooks.server'

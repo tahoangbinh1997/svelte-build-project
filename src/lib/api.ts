@@ -10,7 +10,7 @@ const axiosAPI = axios.create({
 const apiRequest: Function = (method: string, url: string, request: string) => {
 	const headers: any = {
 		authorization:
-			'Bearer 2f1657885c0918f47bd8897084484224fdbb138f340a744142612a87a31f503ffc82d8e9cfc194c474192fdfb68749c9e678f09fae48aa4bc15067908a2b394ae9ee059dc619f879b5d84c45b05ff1e1d6d0b977397f5e5c85401cfeceef02f6bc5bc578862e799ad3df238d9098ba1354917062683e98533b6b75552ace0104'
+			'Bearer 07ac798cd3ee82291ab11f3af33f995b533cf56301c07a6505c09bd74a9cea79cc35158af4c87b397ab0d13704d942ee835af1cb7ae17c3dcbdbb927fc2b01dbc0d5a53058ab3a49c6f8071d6c299498967dc4de5e46efaa10037d6a57900f7d148ecd245b9a2347d6e892aee9c189bdf8210a6c34bb1165f6779ba80f9cae14'
 	}
 	//using the axios instance to perform the request that received from each http method
 	return axiosAPI({
