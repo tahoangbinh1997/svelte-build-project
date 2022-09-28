@@ -75,7 +75,7 @@
 								<div class="blog-entry-2">
 									<!-- svelte-ignore a11y-missing-content -->
 									<a
-										href="/travel/hello-world"
+										href="/travel/{post?.attributes?.Slug}"
 										class="img"
 										style="background-image:url(http://localhost:1337{post?.attributes?.Thumbnail
 											?.data?.attributes?.url || ''})"

@@ -41,16 +41,40 @@ type Tag = {
 	id: number
 }
 
-export const load = async () => {
+type DetailPost = {
+	attributes: {
+		Content: string
+		Description: string
+		Slug: string
+		Thumbnail: any
+		Title: string
+		createdAt: string
+		categories: any
+		locale: string
+		publishedAt: string
+		updatedAt: string
+		updatedBy: any
+		comments: any
+	}
+	id: number
+}
+
+export const load = async ({ params }) => {
 	// locals.userid comes from src/hooks.js
 
 	const data = {
 		posts: [] as Post[],
 		categories: [] as Category[],
-		tags: [] as Tag[]
+		tags: [] as Tag[],
+		detail_post: {} as DetailPost
 	}
 
-	const response = await API.get('posts?populate=*', {})
+	const response = await Promise.all([
+		API.get('categories?populate=*', {}),
+		API.get('posts?populate=*', {}),
+		API.get('tags', {}),
+		API.get(`posts/${params.slug}?populate=*`, {})
+	])
 
 	if (!response[0].data) {
 		data.categories = [] as Category[]
@@ -70,5 +94,44 @@ export const load = async () => {
 		data.tags = response[2].data as Tag[]
 	}
 
+	if (!response[3].data) {
+		data.detail_post = {} as DetailPost
+	} else {
+		data.detail_post = response[3].data as DetailPost
+	}
+
 	return data
 }
+
+/** @type {import('./$types').Actions} */
+// export const actions = {
+// 	add: async ({ request, locals }) => {
+// 		console.log('request: ', request)
+// 		debugger
+
+// 		// const form = await request.formData()
+
+// 		// await api('POST', `todos/${locals.userid}`, {
+// 		// 	text: form.get('text')
+// 		// })
+// 	},
+// 	// edit: async ({ request, locals }) => {
+// 	// 	const form = await request.formData()
+
+// 	// 	await api('PATCH', `todos/${locals.userid}/${form.get('uid')}`, {
+// 	// 		text: form.get('text')
+// 	// 	})
+// 	// },
+// 	// toggle: async ({ request, locals }) => {
+// 	// 	const form = await request.formData()
+
+// 	// 	await api('PATCH', `todos/${locals.userid}/${form.get('uid')}`, {
+// 	// 		done: !!form.get('done')
+// 	// 	})
+// 	// },
+// 	// delete: async ({ request, locals }) => {
+// 	// 	const form = await request.formData()
+
+// 	// 	await api('DELETE', `todos/${locals.userid}/${form.get('uid')}`)
+// 	// }
+// }

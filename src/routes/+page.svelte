@@ -71,7 +71,7 @@
 								<div class="blog-entry d-md-flex" data-aos="fade-up">
 									<!-- svelte-ignore a11y-missing-content -->
 									<a
-										href="/travel/hello-world"
+										href="/travel/{post?.attributes?.Slug}"
 										class="img img-2"
 										style="background-image:url(http://localhost:1337{post?.attributes?.Thumbnail
 											?.data?.attributes?.url || ''})"
