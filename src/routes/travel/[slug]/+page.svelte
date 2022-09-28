@@ -55,7 +55,7 @@
 	})
 
 	const fetchData: Function = async () => {
-		const response = await API.get(`posts/${$page.params.slug}?populate=deep,3`, {})
+		const response = await API.get(`posts/${$page.params.slug}?populate=deep`, {})
 		detailPost = (response?.data || {}) as DetailPost
 		formContent.post = detailPost.id || null
 	}
@@ -83,7 +83,7 @@
 						{@html detailPost?.attributes?.Content || ''}
 						<div class="tag-widget post-tag-container mb-5 mt-5">
 							<div class="tagcloud">
-								{#each detailPost?.attributes?.categories?.data as category}
+								{#each detailPost?.attributes?.categories?.data || [] as category}
 									<!-- svelte-ignore a11y-invalid-attribute -->
 									<a href="#" class="tag-cloud-link">{category?.attributes?.Name || ''}</a>
 								{/each}
@@ -107,7 +107,9 @@
 							</div>
 						</div>
 						<div class="pt-5 mt-5 w-100">
-							<h3 class="mb-5 font-weight-bold">6 Comments</h3>
+							<h3 class="mb-5 font-weight-bold">
+								{detailPost?.attributes?.comments?.data?.length || 0} Comments
+							</h3>
 							<ul class="comment-list">
 								{#each detailPost?.attributes?.comments?.data as comment}
 									<li class="comment">
@@ -121,7 +123,7 @@
 												{formatDate(comment?.attributes?.createdAt, 'YYYY-MM-DD')}
 											</div>
 											<p>
-												{comment?.attributes?.CommenterInfos?.Content}
+												{comment?.attributes?.Content}
 											</p>
 										</div>
 									</li>
