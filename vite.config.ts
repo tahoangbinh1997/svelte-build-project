@@ -1,8 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite'
-import type { UserConfig } from 'vite'
 
-const config: UserConfig = {
-	plugins: [sveltekit()]
+/** @type {import('vite').UserConfig} */
+const config = {
+	plugins: [sveltekit()],
+	server: {
+		port: 5000
+	}
 }
 
 export default config

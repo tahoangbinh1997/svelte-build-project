@@ -11,3 +11,4 @@ declare namespace App {
 
 	// interface Platform {}
 }
+/// <reference types="@svelteness/kit-docs/globals" />

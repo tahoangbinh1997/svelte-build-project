@@ -1,17 +1,35 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte'
 	import { PaginationNav } from 'carbon-components-svelte'
+
+	export let paginationData
+
+	const dispatch = createEventDispatcher()
+
+	function handleChangePage(event) {
+		if (paginationData.page !== event.detail.page) {
+			dispatch('changePage', {
+				page: event.detail.page
+			})
+		}
+	}
 </script>
 
-<PaginationNav shown={7} />
+<PaginationNav
+	total={paginationData?.pageCount}
+	page={paginationData?.page ? paginationData?.page - 1 : 0}
+	shown={7}
+	on:change={handleChangePage}
+/>
 
-<style type="text/scss">
+<style lang="css" scoped>
 	:global(.bx--pagination-nav__list-item) {
 		width: 40px;
 		height: 40px;
+	}
 
-		&:not(:last-child) {
-			margin-right: 5px;
-		}
+	:global(.bx--pagination-nav__list-item:not(:last-child)) {
+		margin-right: 5px;
 	}
 
 	:global(.bx--pagination-nav__page.bx--pagination-nav__page, .bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {
@@ -24,13 +42,12 @@
 		border: 1px solid #1eafed;
 	}
 
+	:global(.bx--pagination-nav__page:hover) {
+		background-color: none !important;
+	}
+
 	:global(.bx--pagination-nav__page) {
-		&:hover {
-			background-color: none !important;
-		}
-		&:focus {
-			outline: none !important;
-		}
+		outline: none !important;
 	}
 
 	:global(.bx--btn.bx--btn--icon-only.bx--tooltip__trigger) {
