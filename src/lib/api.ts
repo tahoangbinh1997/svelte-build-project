@@ -9,8 +9,7 @@ const axiosAPI = axios.create({
 // implement a method to execute all the request from here.
 const apiRequest: Function = (method: string, url: string, request: string) => {
 	const headers: any = {
-		authorization:
-			'Bearer 07ac798cd3ee82291ab11f3af33f995b533cf56301c07a6505c09bd74a9cea79cc35158af4c87b397ab0d13704d942ee835af1cb7ae17c3dcbdbb927fc2b01dbc0d5a53058ab3a49c6f8071d6c299498967dc4de5e46efaa10037d6a57900f7d148ecd245b9a2347d6e892aee9c189bdf8210a6c34bb1165f6779ba80f9cae14'
+		authorization: null
 	}
 	//using the axios instance to perform the request that received from each http method
 	return axiosAPI({
