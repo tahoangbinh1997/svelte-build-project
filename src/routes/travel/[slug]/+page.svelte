@@ -111,7 +111,7 @@
 								{detailPost?.attributes?.comments?.data?.length || 0} Comments
 							</h3>
 							<ul class="comment-list">
-								{#each detailPost?.attributes?.comments?.data as comment}
+								{#each detailPost?.attributes?.comments?.data || [] as comment}
 									<li class="comment">
 										<div class="vcard bio">
 											<!-- svelte-ignore a11y-img-redundant-alt -->
