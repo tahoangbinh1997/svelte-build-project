@@ -3,11 +3,11 @@ import axios from 'axios'
 
 // Create a instance of axios to use the same base url.
 const axiosAPI = axios.create({
-	baseURL: 'http://localhost:1337/api/' // it's not recommended to have this info here.
+	baseURL: import.meta.env.VITE_API_BASE_URL // it's not recommended to have this info here.
 })
 
 // implement a method to execute all the request from here.
-const apiRequest: Function = (method: string, url: string, request: string) => {
+const apiRequest: Function = (method: string, url: string, request: string, query: any) => {
 	const headers: any = {
 		authorization: null
 	}
@@ -16,6 +16,7 @@ const apiRequest: Function = (method: string, url: string, request: string) => {
 		method,
 		url,
 		data: request,
+		params: query,
 		headers
 	})
 		.then((res: any) => {
@@ -27,7 +28,7 @@ const apiRequest: Function = (method: string, url: string, request: string) => {
 }
 
 // function to execute the http get request
-const get: Function = (url, request) => apiRequest('get', url, request)
+const get: Function = (url, query) => apiRequest('get', url, {}, query)
 
 // function to execute the http delete request
 const deleteRequest: Function = (url, request) => apiRequest('delete', url, request)
